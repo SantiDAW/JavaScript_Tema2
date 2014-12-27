@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head lang="es">
+        <meta charset="UTF-8">
+            <title>Ejercicio_3</title>
+                <script>
+                    /*Haz un programa que sirva para dividir dos números. ¿Qué sucede si en lugar de dividir dos números, intentamos dividir dos textos? ¿Qué sucede si el divisor es el número 0? ¿Y si no introducimos nada?
+
+                     NOTA: Utiliza try..catch para evitar errores.
+                    */
+                     try {
+                        var dividendo = parseInt(prompt("Introduce el valor del dividendo"));
+                        var divisor = parseInt(prompt("Introduce el valor del divisor"));
+
+                        if (dividendo == null) {
+                            throw new Error("El campo del dividendo esta vacio");
+                        }
+                        if (divisor == null) {
+                            throw new Error("El campo del divisor esta vacio");
+                        }
+                        if (typeof dividendo == "string") {
+                            throw new Error("El campo del dividendo es para números no letras");
+                        }
+                        if (typeof divisor == "string") {
+                            throw new Error("El campo del divisor es para números no letras");
+                        }
+                        if (divisor == 0) {
+                            throw new Error("El divisor no puede ser 0");
+                        }
+                        if(isNaN(resultado)||resultado==Infinity){
+                            throw new Error("Error en la operación");
+                        }
+                        var resultado = dividendo / divisor;
+                    }
+                    catch (excepcion){
+                            alert(excepcion);
+                    }
+
+                </script>
+    </head>
+    <body>
+
+    </body>
+</html>

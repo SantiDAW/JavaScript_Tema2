@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>Ejercicio_46</title>
+    <script>
+        /*Hacer un programa que solicite y visualice una serie de números distintos de cero. El programa
+          debe terminar cuando introduzcamos el valor cero que no se debe visualizar. Finalmente se
+          desea obtener la cantidad de valores leídos distintos de cero.
+          */
+        var numero, contador=0;
+        numero= prompt("Introduce un número (0 para terminar)", "");
+
+        while (numero !=0)
+        {
+            document.write("<H3>" + numero+" </H3><P>" );
+            contador++;
+            numero= prompt("Introduce un número (0 para terminar)", "");
+        }
+        document.write("Hemos introducido "+ contador + " números");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

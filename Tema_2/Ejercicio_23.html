@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>Ejercicio_23</title>
+    <script>
+        //Calcula la media de una serie de números introducidos por teclado.
+        var respuesta, num, suma=0, contador=0;
+
+        do{
+            contador++;
+            num=parseInt(prompt("Introduce un numero"));
+            suma=suma+num;
+            respuesta = prompt("¿Desea introducir otro numero?", "si");
+        }while(respuesta == "si");
+
+        media=suma/contador;
+        alert("La media es: "+media);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

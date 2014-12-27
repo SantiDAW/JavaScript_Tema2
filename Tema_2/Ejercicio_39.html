@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>Ejercicio_39</title>
+    <script>
+        /*Hacer un programa que escriba los números del 1 al 25 con un bucle for de 3 en 3 y
+          escribiendo 4 números en cada línea.
+          */
+        var contador=0,salida=" ";
+
+        for(var i=1;i<=25;i=i+3){
+            salida=salida+i+" ";
+            contador++;
+            if(contador==4){
+                salida=salida+"\n";
+                contador=0;
+            }
+        }
+        alert(salida);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

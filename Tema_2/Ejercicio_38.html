@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>Ejercicio_38</title>
+    <script>
+            /*Escribir un programa donde el usuario elija entre lo siguiente
+             Pulse 1 si desea cenar Costilla
+             Pulse 2 si desea cenar Pescado
+             Y luego se le pregunte también si desea o no postre
+
+             Usar las funciones: prompt y confirm para pedir los datos
+             Si eligió cenar Costilla->pago 23 €
+             Si eligió cenar Pescado->pago 15 €
+             Si tomo postre->el postre valió 3 €
+
+             Calcular el valor total de la cena dependiendo de las opciones que elija por teclado el usuario,
+             incluyendo una propina del 6%.
+             */
+        var opcion=prompt("Introduce 1 si desea cenar costilla: \nIntroduce 2 si desea cenar pescado: ");
+        var postre=prompt("¿Desea tomar postre?");
+        var resultado,costilla=23,pescado=15,vpostre= 3,propina=1.06;
+
+        if(opcion==1){
+            if(postre==('si'||'SI'||'Si')) {
+                resultado = (costilla + vpostre) * propina;
+                alert("Ha decidido tomar costilla \nPostre: " + postre + "\nLa cuenta asciende a: " + resultado);
+            }
+            else{
+                resultado=costilla*propina;
+                alert("Ha decidido tomar costilla \nPostre: "+postre+"\nLa cuenta asciende a: "+resultado);
+            }
+        }
+        else{
+            if (postre==('si'||'SI'||'Si')) {
+                resultado = (pescado + vpostre) * propina;
+                alert("Ha decidido tomar pescado \nPostre: " + postre + "\nLa cuenta asciende a: " + resultado);
+            }
+            else {
+                  resultado = pescado*propina;
+                  alert("Ha decidido tomar pescado \nPostre: " + postre + "\nLa cuenta asciende a: " + resultado);
+                }
+            }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

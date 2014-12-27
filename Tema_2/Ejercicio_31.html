@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>Ejercicio_31</title>
+    <script>
+        /*Realiza un programa para que dos personas puedan jugar al Master Mind.
+         Primeramente el ordenador pedirá una combinación secreta que consistirá en 4 números y que tecleará una de las personas. Después, la otra persona deberá adivinar dicha combinación secreta para lo que dispondrá como máximo de 8 intentos. Cada intento consistirá en escribir 4 números, tras lo cual el ordenador escribirá el número de muertos y de heridos.
+         1.	Un número está muerto si coincide en valor y en posición con la combinación secreta.
+         2.	Un número está herido si coincide en valor pero no en posición con la combinación secreta.
+         Por ejemplo: si la combinación secreta es  (5  3  1  2), en el intento (5  1  4  4) hay 1 muerto (el 5) y un herido (el 1). Según esta  definición en el intento (5  1  1  2) habría 3 muertos (el 5, el segundo 1 y el 2) y 1 herido (el primer 1).
+         El programa terminará por una de las  dos siguientes situaciones: a) el jugador ha acertado la combinación escrita por el otro o b) se ha llegado a 8 intentos sin acertarla.
+         */
+
+         var heridos=0, muertos=0,jugadornum1,jugadornum2,jugadornum3,jugadornum4,jugador2num1,jugador2num2,jugador2num3,jugador2num4,ataque1,ataque2,ataque3,ataque4;
+        alert("Empieza el jugador 1");
+        jugadornum1= prompt("Introduce el primer numero de tu codigo secreto:");
+        jugadornum2= prompt("Introduce el segundo numero de tu codigo secreto:");
+        jugadornum3= prompt("Introduce el tercer numero de tu codigo secreto:");
+        jugadornum4= prompt("Introduce el cuarto numero de tu codigo secreto:");
+        alert("Le toca al jugador 2");
+        jugador2num1= prompt("Introduce el primer numero de tu codigo secreto:");
+        jugador2num2= prompt("Introduce el segundo numero de tu codigo secreto:");
+        jugador2num3= prompt("Introduce el tercer numero de tu codigo secreto:");
+        jugador2num4= prompt("Introduce el cuarto numero de tu codigo secreto:");
+        alert("Empieza la batalla, teneis 8 turnos");
+
+        for(turnos=1;turnos<=8;turnos++){
+            heridos=0;
+            muertos=0;
+            alert("Le toca al jugador 1");
+            ataque1= prompt("Introduce el primer numero:");
+            ataque2= prompt("Introduce el segundo numero:");
+            ataque3= prompt("Introduce el tercer numero:");
+            ataque4= prompt("Introduce el cuarto numero:");
+
+            if(ataque1==jugador2num1){
+                muertos++;
+            }
+            else{
+                if(ataque1==jugador2num2){
+                    heridos++;
+                }
+                if(ataque1==jugador2num3){
+                    heridos++;
+                }
+                if(ataque1==jugador2num4){
+                    heridos++;
+                }
+            }
+            if(ataque2==jugador2num2){
+                muertos++;
+            }
+            else{
+                if(ataque2==jugador2num1){
+                    heridos++;
+                }
+                if(ataque2==jugador2num3){
+                    heridos++;
+                }
+                if(ataque2==jugador2num4){
+                    heridos++;
+                }
+            }
+            if(ataque3==jugador2num3){
+                muertos++;
+            }
+            else{
+                if(ataque3==jugador2num2){
+                    heridos++;
+                }
+                if(ataque3==jugador2num1){
+                    heridos++;
+                }
+                if(ataque3==jugador2num4){
+                    heridos++;
+                }
+            }
+            if(ataque4==jugador2num4){
+                muertos++;
+            }
+            else{
+                if(ataque4==jugador2num2){
+                    heridos++;
+                }
+                if(ataque4==jugador2num3){
+                    heridos++;
+                }
+                if(ataque4==jugador2num1){
+                    heridos++;
+                }
+            }
+
+            alert("Has tenido "+muertos+" muertos y "+heridos+" heridos");
+
+            if(muertos==4){
+                turnos=8;
+                alert("El jugador 1 ha ganado");
+            }//if
+            else{
+                muertos=0;
+                heridos=0;
+                alert("Le toca al jugador 2");
+                ataque1= prompt("Introduce el primer numero:");
+                ataque2= prompt("Introduce el segundo numero:");
+                ataque3= prompt("Introduce el tercer numero:");
+                ataque4= prompt("Introduce el cuarto numero:");
+
+                if(ataque1==jugador2num1){
+                    muertos++;
+                }
+                else{
+                    if(ataque1==jugador2num2){
+                        heridos++;
+                    }
+                    if(ataque1==jugador2num3){
+                        heridos++;
+                    }
+                    if(ataque1==jugador2num4){
+                        heridos++;
+                    }
+                }
+                if(ataque2==jugador2num2){
+                    muertos++;
+                }
+                else{
+                    if(ataque2==jugador2num1){
+                        heridos++;
+                    }
+                    if(ataque2==jugador2num3){
+                        heridos++;
+                    }
+                    if(ataque2==jugador2num4){
+                        heridos++;
+                    }
+                }
+                if(ataque3==jugador2num3){
+                    muertos++;
+                }
+                else{
+                    if(ataque3==jugador2num2){
+                        heridos++;
+                    }
+                    if(ataque3==jugador2num1){
+                        heridos++;
+                    }
+                    if(ataque3==jugador2num4){
+                        heridos++;
+                    }
+                }
+                if(ataque4==jugador2num4){
+                    muertos++;
+                }
+                else{
+                    if(ataque4==jugador2num2){
+                        heridos++;
+                    }
+                    if(ataque4==jugador2num3){
+                        heridos++;
+                    }
+                    if(ataque4==jugador2num1){
+                        heridos++;
+                    }
+                }
+
+                alert("Has tenido "+muertos+" muertos y "+heridos+" heridos");
+                if(muertos==4) {
+                    turnos = 8;
+                    alert("El jugador 2 ha ganado");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

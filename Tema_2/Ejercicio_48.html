@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>Ejercicio_48</title>
+    <script>
+        /*Escribir un programa para determinar si un número n es primo (un número primo sólo es
+          divisible por el mismo y por la unidad).
+         */
+        var numero, contador = 0,i;
+        numero= prompt("Introduce un número","");
+        for (i=2; i<=numero-1; i++)
+        {
+            if (numero%i== 0)
+                contador = 1;
+        }
+        if (contador ==0)
+            document.write("<H3>El número "+ numero + " es primo</H3>");
+        else
+            document.write("<H3>El número "+ numero + " No es primo</H3>");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

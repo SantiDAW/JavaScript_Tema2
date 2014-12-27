@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>Ejercicio_27</title>
+    <script>
+        //Leer tres números y escribirlos en orden decreciente
+        var num1, num2, num3, pequeño, mediano,grande;
+        num1 =prompt("Introduce el primer numero");
+        num2 =prompt("Introduce el segundo numero");
+        num3 =prompt("Introduce el tercer numero");
+
+        if(num1>num2){
+            if(num2>num3){
+                pequeño=num3;
+                mediano=num2;
+                grande=num1;
+            }
+            else{
+                if(num1>num3){
+                    pequeño=num2;
+                    mediano=num3;
+                    grande=num1;
+                }
+                else{
+                    pequeño=num2;
+                    mediano=num1;
+                    grande=num3;
+                }
+            }
+        }//if
+        else{
+            if(num1>num3){
+                if(num2>num3){
+                    pequeño=num3;
+                    mediano=num1;
+                    grande=num2;
+                }
+                else{
+                    pequeño=num3;
+                    mediano=num2;
+                    grande=num1;
+                }
+            }
+            else{
+                if(num2>num3){
+                    pequeño=num1;
+                    mediano=num3;
+                    grande=num2;
+                }
+                else{
+                    pequeño=num1;
+                    mediano=num2;
+                    grande=num3;
+                }
+
+            }
+        }//else
+
+
+        alert(grande+" "+mediano+" "+pequeño);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

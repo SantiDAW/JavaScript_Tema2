@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>Ejercicio_41</title>
+    <script>
+        /*Hacer un programa que escriba los números del 1 al 25 de 3 en 3 con un bucle do...while y
+          escribiendo 4 números en cada línea.
+         */
+        var contador=0, salida = "", i=1;
+        do
+        {
+            salida= salida + i	+ " ";
+            contador++;
+            if (contador ==4)
+            {
+                salida = salida + "\n";
+                contador=0;
+            }
+            i= i+3;
+        }
+        while (i<=25);
+        alert(salida );
+    </script>
+</head>
+<body>
+
+</body>
+</html>

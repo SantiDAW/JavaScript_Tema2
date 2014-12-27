@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>Ejercicio_50</title>
+    <script>
+        /*Se desea calcular independientemente la suma de los números pares e impares comprendidos
+          entre 1 y 200, en el mismo bucle.
+          */
+        var sumapar = 0, sumaimpar= 0,i;
+        for (i=1; i<= 200; i++)
+        {
+            if (i%2==0)
+                sumapar= sumapar+i;
+            else
+                sumaimpar= sumaimpar + i;
+        }
+        document.write("<H3>La suma de los pares es "+ sumapar + "</H3><P>");
+        document.write("<H3>La suma de los impares es "+ sumaimpar + "</H3><P>");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

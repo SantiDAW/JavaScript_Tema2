@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>Ejecicio_36</title>
+    <script>
+        /*Realizar un ejercicio que permita realizar la multiplicación de dos números mediante sumas
+          sucesivas.
+         */
+        var multiplicando;
+        var multiplicador;
+        var resultado=0;
+        while (isNaN(parseInt(multiplicando)) || isNaN(parseInt(multiplicador)))
+        {
+            multiplicando = prompt("Introduce el multiplicando: ");
+            multiplicador = prompt ("Introduce el multiplicador: ");
+        }
+        multiplicando=parseInt(multiplicando);
+        multiplicador=parseInt(multiplicador);
+        while (multiplicando>0)
+        {
+            resultado=resultado+multiplicador;
+            multiplicando=multiplicando-1;
+        }
+        alert (resultado);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>Ejercicio_22</title>
+    <script>
+        /*Supongamos que nos preguntan qué porcentaje de hombres y qué porcentaje de mujeres hay
+          un salón de clases. Lo primero que tenemos que hacer es preguntar el total de personas que
+          hay, luego hacer un ciclo que en cada iteración pregunte el sexo de cada alumno. En base a
+          esos datos se calculan los porcentajes
+         */
+        var numeroDePersonas=parseInt(prompt("Introduce el número de personas que hay en el salón:"));
+        var Nhombres=0;
+        var Nmujeres=0;
+
+        for(var i=0;i<numeroDePersonas;i++){
+            var sexo=prompt("Introduce el sexo","hombre");
+            if(sexo=="hombre"){
+                Nhombres=Nhombres+1;
+                alert("Se ha añadido un hombre");
+            }
+            else{
+                Nmujeres=Nmujeres+1;
+                alert("Se ha añadido una mujer");
+            }
+        }
+        var porcentajeHombres=(Nhombres*100/numeroDePersonas);
+        var porcentajeMujeres=100-porcentajeHombres;
+        alert("El porcentaje de hombres es: "+porcentajeHombres+"%"+"\nEl porcentaje de mujeres es: "+porcentajeMujeres+"%");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

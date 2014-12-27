@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>Ejercicio_44</title>
+    <script>
+        /*Hacer un programa que visualice los 10 primeros múltiplos de un número que introducimos por
+          teclado. A continuación nos visualice la suma de todos ellos. Utilizando la sentencia for.
+          */
+        var salida= " ";
+        var multiplo, numero, suma=0;
+        numero=parseInt(prompt("Introduce un número: ", ""));
+
+        for (var i= 1; i<= 10; i++)
+        {
+            multiplo= numero * i;
+            salida= salida+multiplo+ " ";
+            suma= suma + multiplo;
+        }
+        alert("Los 10 primeros multiplos de "+numero+" son"+salida + "\nSuma= " + suma);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

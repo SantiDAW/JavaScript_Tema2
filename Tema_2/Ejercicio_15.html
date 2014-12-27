@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>Ejercicio_15</title>
+    <script>
+        /*Hacer un programa  que pida un número, luego pide a tu compañero que intente adivinarlo.
+         Tienes 5 oportunidades. Utiliza la sentencia break para salir del bucle si lo adivina antes.
+          */
+        var numero=prompt("Introduce un número");
+
+        for(var i=5;i>0;i--){
+            alert("Tienes "+i+" intentos para adivinar el número");
+            var prueba=prompt("Intenta adivinar el número");
+            if(numero==prueba){
+                alert("Has adivinado el número: "+numero);
+                break;
+            }
+            else{
+                alert("Lo siento, no has adivinado el número");
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

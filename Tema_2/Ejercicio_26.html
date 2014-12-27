@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>Ejercicio_26</title>
+    <script>
+        /*Escribir un algoritmo que permita jugar a doble o nada: El jugador apuesta una cantidad y tira
+          una moneda (aleatoriamente). Si sale cara obtiene el doble de la cantidad apostada. Si
+          sale cruz lo pierde todo...
+         */
+        var cara, cruz, respuesta, cantidad;
+        cantidad= prompt("¿Cuanto quieres apostar?");
+        do{
+            var rango_superior = 2;
+            var rango_inferior = 1;
+            var aleatorio = Math.floor(Math.random()*(rango_superior-(rango_inferior-1))) + rango_inferior;
+            alert("El numero aleatorio es "+aleatorio);
+            if(aleatorio==1){
+                moneda="cara";
+            }
+            if(aleatorio==2){
+                moneda="cruz";
+            }
+            if(moneda=="cara"){
+                cantidad=cantidad*2;
+                alert("Ha salido cara, su cantidad se dobla: "+cantidad);
+                respuesta = prompt("¿Desea volver a jugar", "si");
+            }
+            else{
+                cantidad=0;
+                alert("Ha salido cruz, tu cantidad de dinero ahora es: "+cantidad);
+            }
+        }while(respuesta == "si" && cantidad>0);
+        alert("La cantidad final de dinero es: "+cantidad);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
